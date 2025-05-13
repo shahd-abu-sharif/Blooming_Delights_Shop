@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blooming Delights - Flower Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Blooming Delights</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" title="clicke me">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Blooming Delights</span>
+            </div>
+            <button class="mobile-menu-close" id="mobile-menu-close" type="button" title="clicke me">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#products" class="mobile-nav-link">Products</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close" type="button" title="clicke me">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here dynamically -->
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total-price">$0.00</span>
+        </div>
+        <div class="cart-actions">
+            <button class="btn checkout-btn">Checkout</button>
+            <button class="btn view-cart-btn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Our Flower Shop</h1>
+                <p>Discover the perfect flowers for every occasion. Fresh, beautiful arrangements delivered with care.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-shop">Shop Now</a>
+                    <a href="#about" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Blooming Delights was founded in 2010 with a simple mission: to bring joy to people's lives through the beauty of flowers. What started as a small neighborhood flower shop has grown into a beloved local business serving the entire community.</p>
+                    <p>Our team of talented florists combines traditional techniques with innovative designs to create stunning arrangements for all occasions. We work directly with local growers to ensure the freshest, most beautiful flowers for our customers.</p>
+                    <p>Whether you're celebrating a special occasion, expressing your love, or simply brightening someone's day, we're here to help you find the perfect floral expression.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558861122-40aa75d3a841?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Florist arranging flowers">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Bestseller</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Rose Bouquet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Eternal Love Rose Bouquet</h3>
+                        <div class="product-price">$49.99</div>
+                        <p class="product-description">A stunning arrangement of 24 long-stemmed red roses, symbolizing deep love and affection.</p>
+                        <button class="add-to-cart" data-id="1" data-name="Eternal Love Rose Bouquet" data-price="49.99" data-image="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Spring Mix Bouquet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Spring Mix Bouquet</h3>
+                        <div class="product-price">$39.99</div>
+                        <p class="product-description">A cheerful mix of seasonal flowers including tulips, daffodils, and hyacinths to welcome spring.</p>
+                        <button class="add-to-cart" data-id="2" data-name="Spring Mix Bouquet" data-price="39.99" data-image="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge">New</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Orchid Arrangement">
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Orchid Arrangement</h3>
+                        <div class="product-price">$59.99</div>
+                        <p class="product-description">Exotic phalaenopsis orchids in a modern ceramic vase, perfect for home or office decor.</p>
+                        <button class="add-to-cart" data-id="3" data-name="Elegant Orchid Arrangement" data-price="59.99" data-image="https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sunflower Bouquet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sunshine Sunflower Bouquet</h3>
+                        <div class="product-price">$44.99</div>
+                        <p class="product-description">Bright and cheerful sunflowers paired with seasonal greens, guaranteed to bring smiles.</p>
+                        <button class="add-to-cart" data-id="4" data-name="Sunshine Sunflower Bouquet" data-price="44.99" data-image="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-badge">Sale</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Lavender Bouquet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lavender Dream Bouquet</h3>
+                        <div class="product-price">$34.99 </div>
+                        <p class="product-description">Fragrant lavender stems with eucalyptus, creating a calming and aromatic arrangement.</p>
+                        <button class="add-to-cart" data-id="5" data-name="Lavender Dream Bouquet" data-price="34.99" data-image="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Succulent Garden">
+                    </div>
+                    <div class="product-info">
+                        <h3>Succulent Garden</h3>
+                        <div class="product-price">$54.99</div>
+                        <p class="product-description">A collection of beautiful succulents in a rustic wooden planter, low-maintenance and long-lasting.</p>
+                        <button class="add-to-cart" data-id="6" data-name="Succulent Garden" data-price="54.99" data-image="https://images.unsplash.com/photo-1526397751294-331021109fbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The flowers I ordered for my anniversary were absolutely stunning! My wife was over the moon. The arrangement was even more beautiful than in the pictures and lasted for weeks. Will definitely be ordering again!"</p>
+                    <p class="testimonial-author">- Michael T.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I've used Blooming Delights for all my corporate events and they never disappoint. The floral arrangements always arrive on time and look spectacular. Their customer service is exceptional too!"</p>
+                    <p class="testimonial-author">- Sarah K.</p>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"The sympathy arrangement I ordered was handled with such care and compassion. The flowers were beautiful and brought some comfort during a difficult time. Thank you for your thoughtful service."</p>
+                    <p class="testimonial-author">- David P.</p>
+                </div>
+                <div class="slider-controls">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="contact">
+        <div class="container">
+            <h2>Join Our Newsletter</h2>
+            <p>Subscribe to receive updates, exclusive offers, and flower care tips straight to your inbox.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SOCIAL MEDIA</h3>
+                    <p>Catch up with me !</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shahd-abu-sharif-1471001a4/" title="linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/shahd-abu-sharif" title="github"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/shahd._designer?igsh=MTR2bjgwczF6NmNyeA==" title="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.behance.net/shahdabusharif2002"><i class="fab fa-behance" title="behance"></i></a>
+
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Palestine , Gaza </li>
+                        <li><i class="fas fa-phone"></i> +9720 592 246 851</li>
+                        <li><i class="fas fa-envelope"></i>eng.shahd.abusharif@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> 24hrs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Created By : Shahd Abu Sharif. <b>All Rights Reserved.</b></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
